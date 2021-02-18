@@ -51,7 +51,7 @@ public class QuizController {
 
 	@GetMapping("/submit")
 	public String submitForm(@ModelAttribute Quiz quiz, RedirectAttributes redirectAttributes) {
-		WebClient webClient = WebClient.create("http://127.0.0.1:5000/");
+		WebClient webClient = WebClient.create("https://mindmattersml.azurewebsites.net");
 		String outcome = webClient.post().uri("/results").body(Mono.just(quiz), Quiz.class).retrieve()
 				.bodyToMono(String.class).block();
 
