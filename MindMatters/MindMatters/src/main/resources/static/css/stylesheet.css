@@ -146,6 +146,20 @@ input[type=submit] {
   padding: 0px 10px;
 }
 
+.col-14 {
+  float: left;
+  width: 18%;
+  margin-top: 6px;
+  padding: 0px 10px;
+}
+
+.col-86 {
+  float: left;
+  width: 82%;
+  margin-top: 10px;
+  padding: 0px 10px;
+}
+
 /* Clear floats after the columns */
 .row:after {
   content: "";
