@@ -70,7 +70,7 @@ public class UserService {
 		user = userRepository.save(newUser);
 		String subject = "Complete Registration!";
 		String text = "To confirm your account, please click here : "
-				+ "http://localhost:8080/users/confirm-account?token=";
+				+ "https://mindmatters.azurewebsites.net/users/confirm-account?token=";
 		saveTokenAndSendEmail(user, subject, text);
 		return "SUCCESS... Confirm email before you can log in";
 
@@ -120,7 +120,7 @@ public class UserService {
 			String subject = "Reset Password!";
 			String text = "To reset your password, please click the link below : "
 					+ "\n The link is valid for 15 minutes only\n"
-					+ "http://localhost:8080/users/reset-password?token=";
+					+ "https://mindmatters.azurewebsites.net//users/reset-password?token=";
 			saveTokenAndSendEmail(user, subject, text);
 			return "SUCCESS... Check your email to reset the password";
 		}
