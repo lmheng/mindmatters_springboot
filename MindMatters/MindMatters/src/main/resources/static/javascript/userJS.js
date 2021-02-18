@@ -1,3 +1,14 @@
+window.onload = function(){
+
+	let container = document.getElementsByClassName('container');
+	
+			for(var i=0; i<container.length; i+=1)
+				{
+					container[i].style.width = "90%";
+					container[i].style.boxShadow = "5px 5px 5px 1px #A3A3A3";
+				}
+	}
+
 function validate(){
 	console.log("function called");
 	var pwd = document.getElementById("newPassword").value;
