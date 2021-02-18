@@ -1,0 +1,353 @@
+@charset "ISO-8859-1";
+
+/* Style the label to display next to the inputs */
+
+body {
+	background-image: linear-gradient(#FFFEF2, #CCFFFE);
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	height: 100%;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+h2 {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+small {
+	font-size: 10px;
+}
+
+span {
+	font-size: 15px;
+	color:#000000;
+	font-family:"Roboto";
+	font-weight:bold;
+}
+
+img{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	max-width: 100%;
+	border: 3px solid #707070;
+	}
+	
+.text{
+	font-size: 25x;
+	color:#000000;
+	font-family:"Roboto";
+	font-weight:normal;
+	
+	}
+.resource_title{
+	font-size: 40x;
+	color:#000000;
+	font-family:"Roboto";
+	font-weight:bold;
+	}
+	
+.videowrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom:0;
+  right: 0;
+  margin:auto;
+  width: 90%;
+  height: 90%;
+}
+
+.resource_container {
+background:#FFFFFF;
+	border-radius: 25px;
+	box-shadow: 5px 5px 5px 1px #A3A3A3;
+	padding: 20px;
+	margin:20px auto;
+	width: 100%;
+	height: auto;
+	align-self:center;
+	clear:both;
+}
+
+.thumbnail{
+	max-width: 100%;
+  	height: auto;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	border: 3px solid #707070;
+	overflow: auto;
+	float:left;
+	}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #ADF4ED;
+  color: white;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn{
+	float: right;
+	padding: 12px 20px;
+	border-radius: 8px;
+	font-size: 15px;
+}
+
+/* Style the container */
+.container {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: none;
+  clear: both;
+}
+
+/* Floating column for inputs: 50% width */
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 0px 10px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+  padding: 0px 10px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+  padding: 0px 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row{
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+/* Header */
+.header_row{
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Title font */
+.title {
+	font-family: 'Oleo Script Swash Caps', cursive;
+	font-size: 35px;
+	text-shadow: 1.5px 1.5px #A3A3A3;
+	color: white;
+	float: left;
+	padding: 14px 0px;
+}
+
+.resource_header{
+	display: none;
+}
+
+.menu{
+	float: right;
+	margin-top: 40px;
+}
+
+.menu_item{
+	display: inline-block;
+	  color: #A3A3A3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu_item:hover{
+	background-color: #ffffff;
+	transition: 0.3s;
+}
+
+.resource_button{
+	border: 0px;
+}
+
+.resource_button:hover{
+	transform: scale(1.1);
+	transition: all 0.3s ease-in-out;
+}
+
+   /* The Modal (background) */
+   #modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+   #modal1 {
+        display: block; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 70%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #5c5c5c;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  top: 90%; /* Place the button at the bottom of the page */
+  left: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #ADF4ED; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 12px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  transition: 0.3s;
+}
+
+#bottom-arrow{
+	display: block;
+	position: fixed;
+	top: 95%;
+	left: 50%;
+	z-index: 99;
+	border: none;
+	outline: none;
+	color: white;
+	text-shadow: 1.5px 1.5px #A3A3A3;
+	font-size: 30px;
+	opacity: 0.7;
+}
+
+.progress_header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-50{
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .thumbnail{
+	position: relative;
+	left: 20%;
+	border: 3px solid #707070;
+	}
+  
+  .col-25 {
+  width: 100%;
+  display:table;
+  margin:auto;
+  padding: 0px 5px;
+}
+
+.col-75 {
+  width: 100%;
+  padding: 0px 5px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+  
+  .title {
+	font-family: 'Oleo Script Swash Caps', cursive;
+	font-size: 35px;
+	text-shadow: 1.5px 1.5px 3px#A3A3A3;
+	color: white;
+	float: left;
+	padding: 5px 0px;
+}
+  
+  .menu{
+	float: left;
+	clear: both;
+	padding: 5px;
+	margin-top: 0px;
+}
+}

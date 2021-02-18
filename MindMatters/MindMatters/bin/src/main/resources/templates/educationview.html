@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+div.container {
+	background:#FFFFFF;
+	border-radius: 25px;
+	border: 2px solid #707070;
+	padding: 20px;
+	margin:20px;
+	margin: auto;
+	max-width: 100%;
+	height: auto;
+	align-self:center;
+}
+body {
+  background-image:linear-gradient(#DDFFF9,#D5FFFB);
+}
+h3 {
+
+	font-size: 16x;
+	color:#000000;
+	font-family:"Roboto";
+	font-weight:bold;
+}
+img{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	max-width: 100%;
+	border: 3px solid #707070;
+	}
+div.text{
+	font-size: 14x;
+	color:#000000;
+	font-family:"Roboto";
+	font-weight:normal;
+	}
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Mindfulness</title>
+</head>
+<body>
+	<div th:object="${resource}" class="container">
+		<h3 th:text="${resource.name}">Article</h3>
+		<img th:src="@{'https://img.youtube.com/vi/'+${resource.urlCode}+'/0.jpg'}"/>
+		<div class="text" align="left" th:text="${resource.description}">Title</div>
+	</div>
+</body>
+</html>

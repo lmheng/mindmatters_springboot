@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/stylesheet.css" th:href="@{/css/stylesheet.css}" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+<script type="text/javascript" th:src="@{/javascript/resourceJS.js}"></script>
+<title>Mindfulness</title>
+</head>
+<body>
+<header th:insert="layout.html :: header" class="resource_header"></header>
+	<div class="container">
+		<div class="resource_header">
+			<h3>Mindfulness</h3>
+			<hr>
+		</div>
+		<br>
+	<div th:object="${resource}" class="row" >
+		<h3 th:text="${resource.name}" style="font-weight:bold">Article</h3>
+	</div>
+	<div class="videowrapper">
+	<iframe width="560" height="349"
+		src="https://www.youtube.com/embed/tgbNymZ7vqY"
+		th:src="@{'https://www.youtube.com/embed/'+${resource.urlCode}}"
+		webkitallowfullscreen mozallowfullscreen allowfullscreen
+		></iframe></div>
+	<div th:object="${resource}" class="row" >
+		<div align="left" class="text" th:text="${resource.description}">description</div>
+	</div>
+	</div>
+</body>
+</html>

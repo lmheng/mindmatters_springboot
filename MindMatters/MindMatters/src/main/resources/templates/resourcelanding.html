@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/stylesheet.css" th:href="@{/css/stylesheet.css}" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+<script type="text/javascript" th:src="@{/javascript/resourceJS.js}"></script>
+<title>Resources</title>
+</head>
+<body>
+	<header th:insert="layout.html :: header" class="resource_header"></header>
+	<div class="container">
+		<h3>Resources</h3>
+		<hr>
+		<br>
+		<div class="row">
+			<div class="col-50">
+				<a href="#" onClick="openSelection()"><img
+					src="/images/Mindfulness_Button.png" alt="" class="resource_button"/></a>
+			</div>
+			<div class="col-50">
+				<a href="#" th:href="@{/resource/edulist/Education}"><img
+					src="/images/Education_Button.png" alt="" class="resource_button"/></a>
+			</div>
+			</div>
+		</div>
+
+		<!-- Modal content -->
+		<div id="modal">
+			<div class="modal-content">
+					<span id="@spanId" class="close" onClick="closeSelection()">&times;</span>
+					<p>Please select a category: </p>
+					<div class="row">
+						<div class="col-25">
+							<a href="#" th:href="@{/resource/list/Anxiety}"><img
+								src="/images/afraid.png" alt="" class="resource_button"/></a>
+						</div>
+						<div class="col-25">
+							<a href="#" th:href="@{/resource/list/GAD}"><img
+								src="/images/tense.png" alt="" class="resource_button"/></a>
+						</div>
+						<div class="col-25">
+							<a href="#" th:href="@{/resource/list/Sleep}"><img
+								src="/images/sleep.png" alt="" class="resource_button"/></a>
+						</div>
+						<div class="col-25">
+							<a href="#" th:href="@{/resource/list/Panic}"><img
+								src="/images/panic.png" alt="" class="resource_button"/></a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-25"></div>
+						<div class="col-25">
+							<a href="#" th:href="@{/resource/list/Ocd}"><img
+								src="/images/obsessed.png" alt="" class="resource_button"/></a>
+						</div>
+						<div class="col-25">
+							<a href="#" th:href="@{/resource/list/Depression}"><img
+								src="/images/depressed.png" alt="" class="resource_button"/></a>
+						</div>
+						<div class="col-25"></div>
+					</div>
+			</div>
+		</div>
+</body>
+</html>

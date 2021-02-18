@@ -1,0 +1,167 @@
+@charset "ISO-8859-1";
+
+/* Style the label to display next to the inputs */
+
+body {
+	background-image: linear-gradient(#FFFEF2, #CCFFFE);
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	height: 100%;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+h2 {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+small {
+	font-size: 10px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: #ADF4ED;
+  color: white;
+  padding: 12px 20px;
+  border: #6ed4d2;
+  border-radius: 8px;
+  cursor: pointer;
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.btn{
+	float: right;
+	padding: 12px 20px;
+	border-radius: 8px;
+	font-size: 15px;
+}
+
+/* Style the container */
+.container {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin: 0 auto;
+  width: 80%;
+  box-shadow: 5px 5px 5px 1px #A3A3A3;
+  clear: both;
+}
+
+/* Floating column for inputs: 50% width */
+.col-50 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 0px 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row{
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+/* Header */
+.header_row{
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* Title font */
+.title {
+	font-family: 'Oleo Script Swash Caps', cursive;
+	font-size: 35px;
+	text-shadow: 1.5px 1.5px #A3A3A3;
+	color: white;
+	float: left;
+	padding: 14px 0px;
+}
+
+.menu{
+	float: right;
+	margin-top: 40px;
+}
+
+.menu_item{
+	display: inline-block;
+	  color: #A3A3A3;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu_item:hover{
+	background-color: #ffffff;
+	transition: 0.3s;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  top: 90%; /* Place the button at the bottom of the page */
+  left: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #ADF4ED; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 12px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+  transition: 0.3s;
+}
+
+#bottom-arrow{
+	display: block;
+	position: fixed;
+	top: 95%;
+	left: 50%;
+	z-index: 99;
+	border: none;
+	outline: none;
+	color: white;
+	text-shadow: 1.5px 1.5px #A3A3A3;
+	font-size: 30	px;
+	opacity: 0.7;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-50{
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .title {
+	font-family: 'Oleo Script Swash Caps', cursive;
+	font-size: 35px;
+	text-shadow: 1.5px 1.5px #A3A3A3;
+	color: white;
+	float: left;
+	padding: 5px 0px;
+}
+  
+  .menu{
+	float: left;
+	clear: both;
+	padding: 5px;
+	margin-top: 0px;
+}
+}

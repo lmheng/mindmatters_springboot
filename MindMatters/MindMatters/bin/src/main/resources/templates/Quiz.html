@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/stylesheet.css" th:href="@{/css/stylesheet.css}" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+<script type="text/javascript" th:src="@{/javascript/quizJS.js}"></script>
+<title>Mind Matters</title>
+</head>
+<body>
+<header th:insert="layout.html :: header"></header>
+	<div class="container">
+		<h3>Quiz</h3>
+		<hr>
+		<form action="" th:object="${quiz}" th:action="@{/quiz/submit}"
+			method="POST" id="form">
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q1}"></p>
+					<br> <input type="radio" id="yes" name="q1" value="1"
+						th:field="*{q1}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q1" value="0" th:field="*{q1}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q2}"></p>
+					<br> <input type="radio" id="yes" name="q2" value="1"
+						th:field="*{q2}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q2" value="0" th:field="*{q2}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q3}"></p>
+					<br> <input type="radio" id="yes" name="q3" value="1"
+						th:field="*{q3}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q3" value="0" th:field="*{q3}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q4}"></p>
+					<br> <input type="radio" id="yes" name="q4" value="1"
+						th:field="*{q4}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q4" value="0" th:field="*{q4}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q5}"></p>
+					<br> <input type="radio" id="yes" name="q5" value="1"
+						th:field="*{q5}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q5" value="0" th:field="*{q5}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q6}"></p>
+					<br> <input type="radio" id="yes" name="q6" value="1"
+						th:field="*{q6}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q6" value="0" th:field="*{q6}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q7}"></p>
+					<br> <input type="radio" id="yes" name="q7" value="1"
+						th:field="*{q7}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q7" value="0" th:field="*{q7}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q8}"></p>
+					<br> <input type="radio" id="yes" name="q8" value="1"
+						th:field="*{q8}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q8" value="0" th:field="*{q8}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q9}"></p>
+					<br> <input type="radio" id="yes" name="q9" value="1"
+						th:field="*{q9}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q9" value="0" th:field="*{q9}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q10}"></p>
+					<br> <input type="radio" id="yes" name="q10" value="1"
+						th:field="*{q10}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q10" value="0" th:field="*{q10}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q11}"></p>
+					<br> <input type="radio" id="yes" name="q11" value="1"
+						th:field="*{q11}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q11" value="0" th:field="*{q11}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q12}"></p>
+					<br> <input type="radio" id="yes" name="q12" value="1"
+						th:field="*{q12}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q12" value="0" th:field="*{q12}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q13}"></p>
+					<br> <input type="radio" id="yes" name="q13" value="1"
+						th:field="*{q13}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q13" value="0" th:field="*{q13}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q14}"></p>
+					<br> <input type="radio" id="yes" name="q14" value="1"
+						th:field="*{q14}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q14" value="0" th:field="*{q14}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q15}"></p>
+					<br> <input type="radio" id="yes" name="q15" value="1"
+						th:field="*{q15}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q15" value="0" th:field="*{q15}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q16}"></p>
+					<br> <input type="radio" id="yes" name="q16" value="1"
+						th:field="*{q16}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q16" value="0" th:field="*{q16}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q17}"></p>
+					<br> <input type="radio" id="yes" name="q17" value="1"
+						th:field="*{q17}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q17" value="0" th:field="*{q17}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q18}"></p>
+					<br> <input type="radio" id="yes" name="q18" value="1"
+						th:field="*{q18}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q18" value="0" th:field="*{q18}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q19}"></p>
+					<br> <input type="radio" id="yes" name="q19" value="1"
+						th:field="*{q19}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q19" value="0" th:field="*{q19}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q20}"></p>
+					<br> <input type="radio" id="yes" name="q20" value="1"
+						th:field="*{q20}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q20" value="0" th:field="*{q20}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q21}"></p>
+					<br> <input type="radio" id="yes" name="q21" value="1"
+						th:field="*{q21}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q21" value="0" th:field="*{q21}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q22}"></p>
+					<br> <input type="radio" id="yes" name="q22" value="1"
+						th:field="*{q22}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q22" value="0" th:field="*{q22}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-50">
+					<p th:utext="#{quiz.q23}"></p>
+					<br> <input type="radio" id="yes" name="q23" value="1"
+						th:field="*{q23}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q23" value="0" th:field="*{q23}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+				<div class="col-50">
+					<p th:utext="#{quiz.q24}"></p>
+					<br> <input type="radio" id="yes" name="q24" value="1"
+						th:field="*{q24}" /> <label for="yes" th:utext="Yes"></label> <br>
+					<input type="radio" id="no" name="q24" value="0" th:field="*{q24}" />
+					<label for="no" th:utext="No"></label>
+				</div>
+			</div>
+			<div class="row">
+					<input type="submit" class="btn btn-success"></input>
+			</div>
+			<br>
+		</form>
+	</div>
+	<span class="glyphicon glyphicon-menu-down" id="bottom-arrow"></span>
+	<button onclick="topFunction()" id="myBtn" class="glyphicon glyphicon-menu-up"></button>
+</body>
+</html>

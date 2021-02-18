@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Mental Health Quiz</title>
+</head>
+<body>
+	<h3>Quiz</h3>
+	<hr>
+	<form action="" th:object="${quiz}" th:action="@{/quiz/submit}"
+		method="POST" >
+		<table align="center">
+		<tr>
+			<!-- <td><input type="hidden" th:field="*{productId}" class="form-control"/></td> -->
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q1}"></p></td><td><input type="text" th:field="*{q1}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q2}"></p></td><td><input type="text" th:field="*{q2}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q3}"></p></td><td><input type="text" th:field="*{q3}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q4}"></p></td><td><input type="text" th:field="*{q4}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q5}"></p></td><td><input type="text" th:field="*{q5}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q6}"></p></td><td><input type="text" th:field="*{q6}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q7}"></p></td><td><input type="text" th:field="*{q7}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q8}"></p></td><td><input type="text" th:field="*{q8}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q9}"></p></td><td><input type="text" th:field="*{q9}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q10}"></p></td><td><input type="text" th:field="*{q10}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q11}"></p></td><td><input type="text" th:field="*{q11}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q12}"></p></td><td><input type="text" th:field="*{q12}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q13}"></p></td><td><input type="text" th:field="*{q13}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q14}"></p></td><td><input type="text" th:field="*{q14}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q15}"></p></td><td><input type="text" th:field="*{q15}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q16}"></p></td><td><input type="text" th:field="*{q16}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q17}"></p></td><td><input type="text" th:field="*{q17}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q18}"></p></td><td><input type="text" th:field="*{q18}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q19}"></p></td><td><input type="text" th:field="*{q19}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q20}"></p></td><td><input type="text" th:field="*{q20}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q21}"></p></td><td><input type="text" th:field="*{q21}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q22}"></p></td><td><input type="text" th:field="*{q22}" class="form-control"></td>
+		</tr>
+		<tr>
+			<td><p th:utext="#{quiz.q23}"></p></td><td><input type="text" th:field="*{q23}" class="form-control"></td>
+			<td><p th:utext="#{quiz.q24}"></p></td><td><input type="text" th:field="*{q24}" class="form-control"></td>
+		</tr>
+		<tr><td><button type="submit" class="btn btn-success">Save</button></td>
+		<td><a href="javascript:history.back()" class="btn btn-default">Go Back</a></td></tr>
+		</table>
+	</form>
+</body>
+</html>

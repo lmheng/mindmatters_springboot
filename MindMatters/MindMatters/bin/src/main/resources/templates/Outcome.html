@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/stylesheet.css" th:href="@{/css/stylesheet.css}" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+	href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap"
+	rel="stylesheet">
+<script type="text/javascript" th:src="@{/javascript/quizJS.js}"></script>
+<title>Mind Matters</title>
+</head>
+<body>
+	<header th:insert="layout.html :: header"></header>
+	<div class="container">
+		<div class="row">
+			<h3>Results</h3>
+			<hr>
+		</div>
+		<br>
+		<div class="row" th:unless="${outcome.equals('Normal')}">
+			<p>Based on our analysis, we have determined that you may be
+				experiencing the following:</p>
+				<br>
+		</div>
+		<div class="row">
+			<h2 th:utext="${outcome}"></h2>
+		</div>
+		<div class="row" th:if="${outcome.equals('Normal')}">
+		<br>
+			<p>Glad to know you are doing great!</p>
+		</div>
+		<div class="row">
+		<br>
+			<small>Mind matters is an app that is designed as a platform
+				to aid individuals in understanding a little more about their
+				current mental state.It should not be considered as a substitute for
+				professional diagnosis and treatment.Essentially, the curated
+				information on mind matters is strictly for educational purposes
+				only. Mind matters is not responsible for the accuracy of the
+				information on the platform that are garnered from other sources.</small>
+		</div>
+		<div class="row">
+		<br>
+			<form action="" th:action="@{/quiz/redirect}" method="GET" id="form">
+				<input type="submit" value="Click to return">
+			</form>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+</body>
+</html>
